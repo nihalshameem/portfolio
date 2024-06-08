@@ -1,33 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("/fonts/fonts.css");
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-color-light: rgb(254, 254, 254);
+  --background-color-dark: rgba(0, 0, 0, 0);
+
+  --text-color-light: #000000;
+  --text-color-dark: rgb(255, 255, 255);
+
+  --secondary-text-color-light: #828282;
+  --secondary-text-color-dark: #a8a3a3;
+
+  --secondary-background-color-light: #d9d9d9;
+  --secondary-background-color-dark: #382828;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body.light-mode {
+  --background-color: var(--background-color-light);
+  --secondary-background-color: var(--secondary-background-color-light);
+
+  --text-color: var(--text-color-light);
+  --secondary-text-color: var(--secondary-text-color-light);
+}
+
+body.dark-mode {
+  --background-color: var(--background-color-dark);
+  --secondary-background-color: var(--secondary-background-color-dark);
+
+  --text-color: var(--text-color-dark);
+  --secondary-text-color: var(--secondary-text-color);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
