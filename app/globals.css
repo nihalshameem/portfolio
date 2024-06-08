@@ -1,5 +1,9 @@
 @import url("/fonts/fonts.css");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --background-color-light: rgb(254, 254, 254);
   --background-color-dark: rgba(0, 0, 0, 0);
@@ -27,7 +31,7 @@ body.dark-mode {
   --secondary-background-color: var(--secondary-background-color-dark);
 
   --text-color: var(--text-color-dark);
-  --secondary-text-color: var(--secondary-text-color);
+  --secondary-text-color: var(--secondary-text-color-dark);
 }
 
 body {
@@ -36,4 +40,37 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-background-color);
+  border-radius: 10px;
+  border: 1px solid var(--secondary-background-color);
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-background-color);
+  opacity: 1;
+}
+
+.container {
+  width: 80%;
+  background: var(--background-color);
+  margin: auto;
+}
+
+.ant-layout-content {
+  background: var(--background-color);
 }

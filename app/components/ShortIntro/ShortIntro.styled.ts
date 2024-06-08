@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const ShortIntroWrapper = styled.div`
   min-height: 600px;
+  padding: 10px 50px;
   background-color: var(--background-color);
   .intro-pic {
     width: 100px;
     height: auto;
   }
   .intro {
-    width: 500px;
+    width: 50%;
     h4 {
       font-size: 40px;
       font-family: "Inter SemiBold";

@@ -1,7 +1,9 @@
 import React, { FC } from "react";
-import { ShortIntroWrapper } from "./ShortIntro.styled";
 import Image from "next/image";
-import { Flex, Space } from "antd";
+
+import { ShortIntroWrapper } from "./ShortIntro.styled";
+
+import { Flex } from "antd";
 
 import Photo from "../../assets/images/myPhoto.png";
 
@@ -9,12 +11,7 @@ interface ShortIntroProps {}
 
 const ShortIntro: FC<ShortIntroProps> = () => (
   <ShortIntroWrapper>
-    <Flex
-      justify="center"
-      align="center"
-      gap={100}
-      style={{ minHeight: "600px" }}
-    >
+    <Flex justify="space-between" align="center" style={{ minHeight: "600px" }}>
       <div className="intro">
         <h4 className="title">Hi there! 👋🏼</h4>
         <p className="content">

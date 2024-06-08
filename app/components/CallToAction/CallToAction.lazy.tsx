@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-const NavBar = dynamic(() => import("./NavBar"), {
+const CallToAction = dynamic(() => import("./CallToAction"), {
   loading: () => <p>loading...</p>,
   ssr: false,
 });
 
-export default NavBar;
+export default CallToAction;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavBarWrapper = styled.div`
   background-color: var(--background-color);
-  padding: 0 15px;
+  padding: 15px;
 
   h5 {
     font-size: 22px;
