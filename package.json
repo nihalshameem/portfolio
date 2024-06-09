@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "antd": "^5.18.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "generate-react-cli": "^8.4.6",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/node": "^20",
