@@ -1,11 +1,9 @@
-import React, { lazy, Suspense } from 'react';
+import dynamic from "next/dynamic";
+import React from "react";
 
-const LazyFooter = lazy(() => import('./Footer'));
-
-const Footer = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
-  <Suspense fallback={null}>
-    <LazyFooter {...props} />
-  </Suspense>
-);
+const Footer = dynamic(() => import("./Footer"), {
+  loading: () => <p>loading...</p>,
+  ssr: false,
+});
 
 export default Footer;
