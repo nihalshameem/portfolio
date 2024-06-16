@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { NavBarWrapper } from "./NavBar.styled";
-import { Button, Flex, Space } from "antd";
+import { Button, Flex, Skeleton, Space } from "antd";
 import { MoonFilled, SunFilled } from "@ant-design/icons";
 import { useTheme } from "@/app/contexts/ThemeContext";
 import Link from "next/link";

@@ -44,7 +44,7 @@ const Footer: FC<FooterProps> = () => (
         size={"large"}
         className="info-section-details"
       >
-        <Link href={"/"} download={true}>
+        <Link href={"/resume.pdf"} download={true} target="_blank">
           Download CV
         </Link>
         <Link href={"/"}>Now in Chennai, India</Link>
