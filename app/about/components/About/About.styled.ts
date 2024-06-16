@@ -2,8 +2,9 @@ import styled from "@/app/utils/styled-component-init";
 
 export const AboutWrapper = styled.div`
   margin: 40px 0;
+  height: calc(100vh - 100px);
   .about {
-    max-width: 70%;
+    max-width: 75%;
     padding: 10px 20px;
     h4.title {
       font-family: "Inter Bold";
