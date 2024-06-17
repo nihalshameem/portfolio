@@ -11,7 +11,7 @@ interface ShortIntroProps {}
 
 const ShortIntro: FC<ShortIntroProps> = () => (
   <ShortIntroWrapper>
-    <Flex justify="space-between" align="center" style={{ minHeight: "600px" }}>
+    <Flex justify="space-between" align="center">
       <div className="intro">
         <h4 className="title">Hi there! 👋🏼</h4>
         <p className="content">

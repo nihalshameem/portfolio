@@ -6,7 +6,7 @@
 
 :root {
   --background-color-light: rgb(254, 254, 254);
-  --background-color-dark: rgba(0, 0, 0, 0);
+  --background-color-dark: rgba(0, 0, 0);
 
   --text-color-light: #000000;
   --text-color-dark: rgb(255, 255, 255);
@@ -16,6 +16,9 @@
 
   --secondary-background-color-light: #d9d9d9;
   --secondary-background-color-dark: #382828;
+
+  --inverse-background-color: var(--background-color-dark);
+  --inverse-text-color: var(--text-color-dark);
 }
 
 body.light-mode {
@@ -24,6 +27,10 @@ body.light-mode {
 
   --text-color: var(--text-color-light);
   --secondary-text-color: var(--secondary-text-color-light);
+
+  --inverse-background-color: var(--background-color-dark);
+  --inverse-text-color: var(--text-color-dark);
+
 }
 
 body.dark-mode {
@@ -32,6 +39,9 @@ body.dark-mode {
 
   --text-color: var(--text-color-dark);
   --secondary-text-color: var(--secondary-text-color-dark);
+
+  --inverse-background-color: var(--background-color-light);
+  --inverse-text-color: var(--text-color-light);
 }
 
 body {
