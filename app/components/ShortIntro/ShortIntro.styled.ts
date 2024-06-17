@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const ShortIntroWrapper = styled.div`
-  min-height: 600px;
+  height: calc(100vh - 100px);
   padding: 10px 50px;
+  align-items: center;
+  display: flex;
   background-color: var(--background-color);
   .intro-pic {
     width: 100px;
