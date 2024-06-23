@@ -19,6 +19,9 @@
 
   --inverse-background-color: var(--background-color-dark);
   --inverse-text-color: var(--text-color-dark);
+
+  --card-gradient-dark: linear-gradient(45deg, #0000009c, #ffffffe0);
+  --card-gradient-light: linear-gradient(45deg, #0000001a, transparent);
 }
 
 body.light-mode {
@@ -30,6 +33,7 @@ body.light-mode {
 
   --inverse-background-color: var(--background-color-dark);
   --inverse-text-color: var(--text-color-dark);
+  --card-gradient: var(--card-gradient-light);
 
 }
 
@@ -42,6 +46,7 @@ body.dark-mode {
 
   --inverse-background-color: var(--background-color-light);
   --inverse-text-color: var(--text-color-light);
+  --card-gradient: var(--card-gradient-dark);
 }
 
 body {
