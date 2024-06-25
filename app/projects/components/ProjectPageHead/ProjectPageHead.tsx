@@ -2,12 +2,15 @@ import React, { FC } from "react";
 
 import { ProjectPageHeadWrapper } from "./ProjectPageHead.styled";
 
-interface ProjectPageHeadProps {}
+interface ProjectPageHeadProps {
+  title: string;
+  content: string;
+}
 
-const ProjectPageHead: FC<ProjectPageHeadProps> = () => (
+const ProjectPageHead: FC<ProjectPageHeadProps> = ({ title, content }) => (
   <ProjectPageHeadWrapper>
-    <h4>Projects</h4>
-    <h6>These are my projects</h6>
+    <h4>{title}</h4>
+    <h6>{content}</h6>
   </ProjectPageHeadWrapper>
 );
 

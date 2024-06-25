@@ -10,7 +10,7 @@ import Img1 from "@/app/assets/images/p1_1.png";
 export default function ProjectsPage() {
   return (
     <div className="container">
-      <ProjectPageHead />
+      <ProjectPageHead title="Projects" content="These are my projects" />
       <Row align={"middle"}>
         {/* loop projects when it get dynamic */}
         <Col span={12}>
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
             title="portfolio"
             content="lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eos, voluptatibus, quo nisi accusantium fuga est sit aliquid officiis vero fugit quas veniam inventore eveniet unde modi vitae totam fugiat?"
             img={Img1}
-            link="/portfolio"
+            link="/projects/portfolio"
           />
         </Col>
       </Row>
