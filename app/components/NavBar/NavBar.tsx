@@ -3,8 +3,8 @@ import React, { FC, useState } from "react";
 
 import { NavBarWrapper } from "./NavBar.styled";
 
-import { Button, Drawer, Flex, Menu, MenuItemProps, MenuProps } from "antd";
 import { MenuOutlined, MoonFilled, SunFilled } from "@ant-design/icons";
+import { Button, Drawer, Flex, Menu, MenuProps } from "antd";
 
 import { useTheme } from "@/app/contexts/ThemeContext";
 
@@ -27,19 +27,7 @@ const NavBar: FC<NavBarProps> = () => {
       onClick: toggleTheme,
     },
   ];
-  // {
-  //   key: "theme",
-  //   label: (
-  //     <Button
-  //       type="text"
-  //       onClick={toggleTheme}
-  //       size="large"
-  //       icon={darkMode ? <SunFilled /> : <MoonFilled />}
-  //     >
-  //       {visible && (darkMode ? "Light Theme" : "Dark Theme")}
-  //     </Button>
-  //   ),
-  // },
+
   const showDrawer = () => {
     setVisible(true);
   };
@@ -64,6 +52,7 @@ const NavBar: FC<NavBarProps> = () => {
             mode="horizontal"
             items={items}
             className="nav-elements"
+            key={"menu1"}
           />
         </Flex>
       </div>

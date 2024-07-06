@@ -7,10 +7,10 @@ import CallToAction from "./components/CallToAction/CallToAction.lazy";
 
 export default function Page() {
   return (
-    <div className="container">
+    <>
       <ShortIntro />
       <OverView />
       <CallToAction />
-    </div>
+    </>
   );
 }

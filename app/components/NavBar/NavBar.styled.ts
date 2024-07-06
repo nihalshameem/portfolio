@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@/app/utils/styled-component-init";
 
 export const NavBarWrapper = styled.div`
   position: relative;

@@ -1,5 +1,4 @@
 "use client";
-
 import {
   createContext,
   useState,
@@ -7,6 +6,7 @@ import {
   useContext,
   useEffect,
 } from "react";
+
 import { ConfigProvider, theme } from "antd";
 
 interface ThemeContextProps {
@@ -17,7 +17,7 @@ interface ThemeContextProps {
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
