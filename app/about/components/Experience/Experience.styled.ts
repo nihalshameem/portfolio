@@ -1,13 +1,12 @@
 import styled from "@/app/utils/styled-component-init";
 
 export const ExperienceWrapper = styled.div`
-//   margin: 40px 0;
   h4 {
     font-family: "Inter Bold";
     font-size: 30px;
     color: var(--primary-text-color);
     text-align: center;
-    margin: 40px;
+    margin-bottom: 40px;
   }
   .ant-timeline-item-right {
     .timelines {

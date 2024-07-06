@@ -15,14 +15,14 @@ const UserPage: FC<UserPageProps> = ({ params }) => {
   const { slug } = params;
 
   return (
-    <div className="container">
+    <>
       <ProjectPageHead
         title="Portofolio"
         content="This is my portfolio project"
       />
       <ProjectDetail />
       <MoreProjects />
-    </div>
+    </>
   );
 };
 

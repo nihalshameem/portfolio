@@ -14,8 +14,10 @@ const MyApp = ({ children }: { children: React.ReactNode }) => {
     <ThemeProvider>
       <Layout>
         <NavBar />
-        <Content>{children}</Content>
-        <Footer />
+        <div className="container">
+          <Content>{children}</Content>
+          <Footer />
+        </div>
       </Layout>
     </ThemeProvider>
   );

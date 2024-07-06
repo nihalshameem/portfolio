@@ -1,8 +1,9 @@
+import { Skeleton } from "antd";
 import dynamic from "next/dynamic";
 import React from "react";
 
 const CallToAction = dynamic(() => import("./CallToAction"), {
-  loading: () => <p>loading...</p>,
+  loading: () => <Skeleton />,
   ssr: false,
 });
 
