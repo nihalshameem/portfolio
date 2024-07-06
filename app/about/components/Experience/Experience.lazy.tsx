@@ -1,8 +1,10 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
+import { Skeleton } from "antd";
+
 const Experience = dynamic(() => import("./Experience"), {
-  loading: () => <p>loading...</p>,
+  loading: () => <Skeleton />,
   ssr: false,
 });
 

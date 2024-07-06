@@ -4,7 +4,7 @@ import { ProjectDetailWrapper } from "./ProjectDetail.styled";
 
 import MainImg from "@/app/assets/images/p1_1.png";
 import Image from "next/image";
-import { Flex } from "antd";
+import { Col, Flex, Row } from "antd";
 
 interface ProjectDetailProps {}
 
@@ -23,14 +23,18 @@ const ProjectDetail: FC<ProjectDetailProps> = () => (
       voluptate nisi numquam perspiciatis quas rerum optio dolorum tempore
       eveniet asperiores veritatis consequatur rem quibusdam.
     </p>
-    <Flex align="center" justify="space-around">
-      <div className="image-container">
-         <Image src={MainImg} alt="extra1" className="extra-img"/>
-      </div>
-      <div className="image-container">
-         <Image src={MainImg} alt="extra2" className="extra-img"/>
-      </div>
-    </Flex>
+    <Row gutter={[50, 24]} justify="center">
+      <Col xs={24} sm={24} md={12} lg={8} xl={8}>
+        <div className="image-container">
+          <Image src={MainImg} alt="extra1" className="extra-img" />
+        </div>
+      </Col>
+      <Col xs={24} sm={24} md={12} lg={8} xl={8}>
+        <div className="image-container">
+          <Image src={MainImg} alt="extra2" className="extra-img" />
+        </div>
+      </Col>
+    </Row>
     <p className="content">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem omnis
       nam quam quia exercitationem minima ipsa nisi quidem, voluptate

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@/app/utils/styled-component-init";
 
 export const ProjectCardsWrapper = styled.div`
   transition: 0.5s;

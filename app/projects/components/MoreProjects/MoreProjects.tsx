@@ -12,8 +12,8 @@ interface MoreProjectsProps {}
 const MoreProjects: FC<MoreProjectsProps> = () => (
   <MoreProjectsWrapper>
     <h4>More Projects</h4>
-    <Row align={"middle"} gutter={[50, 10]}>
-      <Col span={8}>
+    <Row gutter={[16, 24]} justify="center">
+      <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <ProjectCards
           title="portfolio"
           content="lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eos, voluptatibus, quo nisi accusantium fuga est sit aliquid officiis vero fugit quas veniam inventore eveniet unde modi vitae totam fugiat?"
@@ -21,7 +21,7 @@ const MoreProjects: FC<MoreProjectsProps> = () => (
           link="/projects/portfolio"
         />
       </Col>
-      <Col span={8}>
+      <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <ProjectCards
           title="portfolio"
           content="lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eos, voluptatibus, quo nisi accusantium fuga est sit aliquid officiis vero fugit quas veniam inventore eveniet unde modi vitae totam fugiat?"
@@ -29,7 +29,7 @@ const MoreProjects: FC<MoreProjectsProps> = () => (
           link="/projects/portfolio"
         />
       </Col>
-      <Col span={8}>
+      <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <ProjectCards
           title="portfolio"
           content="lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eos, voluptatibus, quo nisi accusantium fuga est sit aliquid officiis vero fugit quas veniam inventore eveniet unde modi vitae totam fugiat?"

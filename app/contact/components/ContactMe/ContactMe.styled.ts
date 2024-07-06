@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const ContactMeWrapper = styled.div`
-  min-height: calc(100vh - 140px);
-  margin: 40px;
+  padding: 20px;
 
   .form-div {
-    // width: 80%;
-    padding: 0 40px;
+    max-width: 500px;
+    margin: 0 auto;
 
     h4 {
       font-family: "Inter Bold";
@@ -24,40 +23,46 @@ export const ContactMeWrapper = styled.div`
       margin-bottom: 10px;
     }
 
-    form {
-      // width: 90%;
-    }
-
     input {
       height: 35px;
     }
 
-    button {
-      width: 100%;
-      background-color: var(--inverse-background-color);
-      color: var(--inverse-text-color);
-      border-color: var(--inverse-background-color);
-      margin-top: 30px;
-      height: 40px;
+    .contact-form {
+      .ant-form-item {
+        margin-bottom: 15px;
+      }
+
+      .submitBtn {
+        width: 100%;
+        background-color: var(--inverse-background-color);
+        color: var(--inverse-text-color);
+        border-color: var(--inverse-background-color);
+        margin-top: 30px;
+        height: 40px;
+
+        &:hover {
+          background-color: #40a9ff;
+        }
+      }
     }
   }
 
-  .carousel {
-    border-radius: 5px !important;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    width: 400px !important;
+  .carousel-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .slick-list {
-      border-radius: 5px;
+  @media (max-width: 767px) {
+    .form-div,
+    .carousel-col {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 10px;
     }
 
-    img {
-      border-radius: 5px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      height: 500px;
-      width: 400px !important;
-      object-fit: cover;
-      object-position: bottom;
+    .carousel-col {
+      margin-top: 20px;
     }
   }
 `;

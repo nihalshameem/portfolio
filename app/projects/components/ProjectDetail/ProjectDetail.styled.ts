@@ -15,8 +15,8 @@ export const ProjectDetailWrapper = styled.div`
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
-    width: 500px;
-    height: 300px;
+    max-width: 500px;
+    max-height: 300px;
     margin: 40px 0;
     transition: 0.2s;
     &:hover {

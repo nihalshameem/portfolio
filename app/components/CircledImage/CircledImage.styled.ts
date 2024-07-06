@@ -1,6 +1,8 @@
 import styled from "@/app/utils/styled-component-init";
 
 export const CircledImageWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
   .circle-container {
     width: 200px;
     height: 200px;
@@ -8,7 +10,6 @@ export const CircledImageWrapper = styled.div`
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 0;
-    margin: 0 auto;
 
     .circle {
       width: 200px;

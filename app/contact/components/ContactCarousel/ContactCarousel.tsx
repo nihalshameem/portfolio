@@ -18,12 +18,14 @@ const ContactCarousel: FC<ContactCarouselProps> = () => (
       autoplaySpeed={5000}
       className="carousel"
       dots={false}
-      style={{ borderRadius: 5 }}
-      lazyLoad="progressive"
       dotPosition="left"
     >
-      <Image src={Img1} alt="_image" priority />
-      <Image src={Img2} alt="_image" priority />
+      <div className="carousel-item">
+        <Image src={Img1} alt="_image" priority objectFit="cover" />
+      </div>
+      <div className="carousel-item">
+        <Image src={Img2} alt="_image" priority objectFit="cover" />
+      </div>
     </Carousel>
   </ContactCarouselWrapper>
 );

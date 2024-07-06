@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from "@/app/utils/styled-component-init";
 
 export const FooterWrapper = styled.div`
-  padding: 30px 50px;
+  padding: 10px;
   min-height: 300px;
   background: var(--background-color);
   position: relative;
@@ -17,6 +17,7 @@ export const FooterWrapper = styled.div`
     font-size: 20px;
   }
   .info-section {
+    display: block;
     text-align: right;
     margin-bottom: 30px;
     h4 {
@@ -24,12 +25,36 @@ export const FooterWrapper = styled.div`
       font-size: 18px;
     }
   }
+  .info-section-col {
+    justify-content: flex-end;
+    display: flex;
+  }
   .info-section-details {
     text-align: right;
     a {
       font-family: "Inter Medium";
       font-size: 16px;
       color: var(--secondary-text-color);
+    }
+  }
+
+  @media (max-width: 575.9px) {
+    .social-media {
+      h4 {
+        text-align: center;
+      }
+    }
+    .social-media-links-col {
+      text-align: center;
+    }
+    .info-section-details {
+      text-align: center;
+    }
+    .info-section-col {
+      justify-content: center;
+    }
+    .info-section {
+      display: none;
     }
   }
 `;

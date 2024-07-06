@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 import { FooterWrapper } from "./Footer.styled";
 
-import { Divider, Flex, Space } from "antd";
+import { Divider, Row, Col, Space } from "antd";
 import {
   FacebookFilled,
   LinkedinFilled,
@@ -16,43 +16,51 @@ interface FooterProps {}
 const Footer: FC<FooterProps> = () => (
   <FooterWrapper>
     <Divider />
-    <Flex justify="space-between" align="flex-start">
-      <div className="social-media">
-        <h4>Nihal Shameem</h4>
-      </div>
-      <div className="info-section">
-        <h4>Contact Information and CV</h4>
-      </div>
-    </Flex>
-    <Flex justify="space-between" align="flex-end">
-      <Space className="social-media-links" size={"large"}>
-        <Link href={"/"}>
-          <FacebookFilled />
-        </Link>
-        <Link href={"/"}>
-          <LinkedinFilled />
-        </Link>
-        <Link href={"/"}>
-          <GithubFilled />
-        </Link>
-        <Link href={"/"}>
-          <InstagramOutlined />
-        </Link>
-      </Space>
-      <Space
-        direction="vertical"
-        size={"large"}
-        className="info-section-details"
-      >
-        <Link href={"/resume.pdf"} download={true} target="_blank">
-          Download CV
-        </Link>
-        <Link href={"/"}>Now in Chennai, India</Link>
-        <Link href={"mailto:nihalshameem6@gmail.com"}>
-          nihalshameem6@gmail.com
-        </Link>
-      </Space>
-    </Flex>
+    <Row justify="center" align="top" gutter={[16, 24]}>
+      <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+        <div className="social-media">
+          <h4>Nihal Shameem</h4>
+        </div>
+      </Col>
+      <Col xs={24} sm={12} md={12} lg={12} xl={12}>
+        <div className="info-section">
+          <h4>Contact Information and CV</h4>
+        </div>
+      </Col>
+    </Row>
+    <Row justify="center" align="bottom" gutter={[16, 24]}>
+      <Col xs={24} sm={12} md={12} lg={12} xl={12} className="social-media-links-col">
+        <Space className="social-media-links" size={"large"}>
+          <Link href={"/"}>
+            <FacebookFilled />
+          </Link>
+          <Link href={"/"}>
+            <LinkedinFilled />
+          </Link>
+          <Link href={"/"}>
+            <GithubFilled />
+          </Link>
+          <Link href={"/"}>
+            <InstagramOutlined />
+          </Link>
+        </Space>
+      </Col>
+      <Col xs={24} sm={12} md={12} lg={12} xl={12} className="info-section-col">
+        <Space
+          direction="vertical"
+          size={"large"}
+          className="info-section-details"
+        >
+          <Link href={"/resume.pdf"} download={true} target="_blank">
+            Download CV
+          </Link>
+          <Link href={"/"}>Now in Chennai, India</Link>
+          <Link href={"mailto:nihalshameem6@gmail.com"}>
+            nihalshameem6@gmail.com
+          </Link>
+        </Space>
+      </Col>
+    </Row>
   </FooterWrapper>
 );
 
