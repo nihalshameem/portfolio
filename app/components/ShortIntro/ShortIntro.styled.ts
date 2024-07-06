@@ -1,18 +1,12 @@
 import styled from "@/app/utils/styled-component-init";
 
 export const ShortIntroWrapper = styled.div`
-  min-height: 100vh;
+  min-height: 90vh;
   margin: 0 auto;
-  padding: 10px 50px;
+  padding: 10px;
   align-items: center;
   display: flex;
   background-color: var(--background-color);
-  .small-d {
-    display: none;
-  }
-  .not-small-d {
-    display: block;
-  }
   .intro-pic {
     width: 100px;
     height: auto;
@@ -34,15 +28,7 @@ export const ShortIntroWrapper = styled.div`
     .intro-row {
       flex-direction: column-reverse;
     }
+    min-height: 110vh;
     padding: 10px;
-  }
-
-  @media (max-width: 500px) {
-    .small-d {
-      display: block;
-    }
-    .not-small-d {
-      display: none;
-    }
   }
 `;

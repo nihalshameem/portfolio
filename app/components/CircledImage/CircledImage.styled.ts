@@ -8,6 +8,7 @@ export const CircledImageWrapper = styled.div`
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 0;
+    margin: 0 auto;
 
     .circle {
       width: 200px;

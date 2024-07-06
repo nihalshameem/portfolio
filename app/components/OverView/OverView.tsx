@@ -1,26 +1,20 @@
 import React, { FC } from "react";
-
 import { OverViewWrapper } from "./OverView.styled";
-
-import { Col, Row } from "antd";
 import {
   GlobalOutlined,
   CodepenOutlined,
   SafetyCertificateOutlined,
   ExperimentOutlined,
 } from "@ant-design/icons";
+import { Col, Row } from "antd";
 
 interface OverViewProps {}
 
 const OverView: FC<OverViewProps> = () => (
   <OverViewWrapper>
-    <h4>Overview</h4>
-    <Row
-      gutter={[50, 100]}
-      justify="space-between"
-      style={{ marginBottom: 10 }}
-    >
-      <Col span={12}>
+    <Row gutter={[16, 24]} justify="center">
+      <Col xs={24} sm={24} md={12} lg={10} xl={10}>
+        <h4>Overview</h4>
         <div className="card">
           <GlobalOutlined className="icons" />
           <p className="title">Professional Summary</p>
@@ -34,7 +28,7 @@ const OverView: FC<OverViewProps> = () => (
           </p>
         </div>
       </Col>
-      <Col span={12}>
+      <Col xs={24} sm={24} md={12} lg={10} xl={10} className="marginalble-col">
         <div className="card">
           <CodepenOutlined className="icons" />
           <p className="title">Skills</p>
@@ -46,9 +40,7 @@ const OverView: FC<OverViewProps> = () => (
           </p>
         </div>
       </Col>
-    </Row>
-    <Row gutter={[50, 100]} style={{ marginTop: 10 }}>
-      <Col span={12}>
+      <Col xs={24} sm={24} md={12} lg={10} xl={10}>
         <div className="card">
           <SafetyCertificateOutlined className="icons" />
           <p className="title">Certifications and Awards</p>
@@ -59,7 +51,7 @@ const OverView: FC<OverViewProps> = () => (
           </p>
         </div>
       </Col>
-      <Col span={12}>
+      <Col xs={24} sm={24} md={12} lg={10} xl={10}>
         <div className="card">
           <ExperimentOutlined className="icons" />
           <p className="title">Experience</p>
