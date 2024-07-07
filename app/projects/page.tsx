@@ -5,7 +5,7 @@ import { Col, Row } from "antd";
 
 import ProjectPageHead from "./components/ProjectPageHead/ProjectPageHead.lazy";
 import ProjectCards from "./components/ProjectCards/ProjectCards.lazy";
-import Img1 from "@/app/assets/images/p1_1.png";
+import Img1 from "@/app/assets/images/portfolio/main.png";
 
 export default function ProjectsPage() {
   return (

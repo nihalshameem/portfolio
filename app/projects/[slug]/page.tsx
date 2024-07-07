@@ -17,11 +17,12 @@ const UserPage: FC<UserPageProps> = ({ params }) => {
   return (
     <>
       <ProjectPageHead
-        title="Portofolio"
-        content="This is my portfolio project"
+        title="Nihal Shameem's Portfolio"
+        content="A modern and responsive portfolio website showcasing my expertise in full-stack development, featuring a collection of my projects, skills, and professional journey. Built using React, Next.js, and TypeScript to deliver a seamless user experience."
       />
       <ProjectDetail />
-      <MoreProjects />
+      {/* implement after making it dynamic */}
+      {/* <MoreProjects /> */}
     </>
   );
 };

@@ -22,7 +22,7 @@ export const ContactCarouselWrapper = styled.div`
 
   .carousel-item img {
     height: 500px;
-    // width: 400px !important;
+    width: 100%;
     object-fit: cover;
     object-position: center;
   }
