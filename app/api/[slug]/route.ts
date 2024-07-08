@@ -1,5 +1,6 @@
 import { errMessageIns } from "@/app/utils/commonUtils";
-import { controllerMapping } from "@/app/utils/config";
+import { clientencryptionStatus, controllerMapping } from "@/app/utils/config";
+import { clientDecrypt, clientEncrypt } from "@/app/utils/cryptoUtils";
 import { NextRequest, NextResponse } from "next/server";
 
 // Define the type of the error response data
@@ -18,6 +19,9 @@ export async function POST(
 
   try {
     reqData = await request.json();
+    if (clientencryptionStatus === "yes") {
+      reqData = clientDecrypt(reqData && reqData.enc);
+    }
   } catch (error) {
     return NextResponse.json(
       {
@@ -51,8 +55,14 @@ export async function POST(
       const statusCode = responseData.message.includes("required") ? 422 : 400;
       return NextResponse.json(responseData, { status: statusCode });
     }
-
-    return NextResponse.json(responseData, { status: 200 });
+    if (clientencryptionStatus === "yes") {
+      return NextResponse.json(
+        { enc: clientEncrypt(JSON.stringify(responseData)) },
+        { status: 200 }
+      );
+    } else {
+      return NextResponse.json(responseData, { status: 200 });
+    }
   } catch (error) {
     // Handle the error with type checking
     return NextResponse.json(

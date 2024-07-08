@@ -28,7 +28,7 @@ export async function coreRequest<T = any>(
     // Return the successful response
     return (await response.json()) as T;
   } catch (error) {
-    console.error("API Request Error:", errMessageIns(error));
+    console.error("core API Request Error:", errMessageIns(error));
     throw error;
   }
 }
