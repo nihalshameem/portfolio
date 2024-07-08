@@ -1,11 +1,14 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import { ContactMeWrapper } from "./ContactMe.styled";
 
-import { Button, Col, Form, Input, Row } from "antd";
 import TextArea from "antd/es/input/TextArea";
+import { Button, Col, Form, Input, message, Row } from "antd";
+import { NoticeType } from "antd/es/message/interface";
 
 import ContactCarousel from "../ContactCarousel/ContactCarousel.lazy";
+import { apiRequest } from "@/app/utils/apiRequest";
+import { errMessageIns } from "@/app/utils/commonUtils";
 import { FormInputTypes } from "../../ContactEntities";
 import { formInputs } from "../../ContactRepositories";
 
@@ -13,14 +16,47 @@ interface ContactMeProps {}
 
 const ContactMe: FC<ContactMeProps> = () => {
   const [form] = Form.useForm<FormInputTypes>();
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const conactMeApicall = async (
+    req: any,
+    cb: (type: NoticeType, msg: string) => void
+  ) => {
+    try {
+      const data = await apiRequest("contact-me", "POST", req);
+      if (data && data.status === "success") {
+        cb(
+          "success",
+          data && data.message ? data.message : "Submitted Successfully"
+        );
+      } else {
+        cb(
+          "error",
+          data && data.message ? data.message : "Something went wrong!"
+        );
+      }
+    } catch (error) {
+      cb("error", errMessageIns(error));
+    }
+  };
 
   const onFinish = (values: FormInputTypes) => {
-    console.log("Form Values:", values);
-    form.resetFields();
+    setLoading(true);
+    conactMeApicall(values, (type, msg) => {
+      setLoading(false);
+      type === "success" && form.resetFields();
+      messageApi.open({
+        type: type,
+        content: msg,
+      });
+    });
   };
 
   return (
     <ContactMeWrapper>
+      {contextHolder}
       <Row gutter={[30, 30]} justify="center" align={"bottom"}>
         <Col xs={24} md={12} className="form-col">
           <div className="form-div">
@@ -82,7 +118,12 @@ const ContactMe: FC<ContactMeProps> = () => {
                   </Form.Item>
                 </Col>
               </Row>
-              <Button className="submitBtn" size="large" htmlType="submit">
+              <Button
+                className="submitBtn"
+                size="large"
+                htmlType="submit"
+                loading={loading}
+              >
                 Submit
               </Button>
             </Form>
