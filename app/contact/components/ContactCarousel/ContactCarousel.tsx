@@ -21,10 +21,10 @@ const ContactCarousel: FC<ContactCarouselProps> = () => (
       dotPosition="left"
     >
       <div className="carousel-item">
-        <Image src={Img1} alt="_image" priority objectFit="cover" />
+        <Image src={Img1} alt="_image" priority />
       </div>
       <div className="carousel-item">
-        <Image src={Img2} alt="_image" priority objectFit="cover" />
+        <Image src={Img2} alt="_image" priority />
       </div>
     </Carousel>
   </ContactCarouselWrapper>
