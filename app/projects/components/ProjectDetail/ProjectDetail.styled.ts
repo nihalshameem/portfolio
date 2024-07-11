@@ -32,6 +32,8 @@ export const ProjectDetailWrapper = styled.div`
     border-radius: 10px;
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
+    width: 100%;
+    height: 100%;
   }
   .content {
     font-family: "Inter Regular";

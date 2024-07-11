@@ -5,19 +5,17 @@ import { ProjectDetailWrapper } from "./ProjectDetail.styled";
 
 import { Col, Row } from "antd";
 
-import MainImg from "@/app/assets/images/portfolio/main.png";
-import HomeLight from "@/app/assets/images/portfolio/homepage.png";
-import HomeDark from "@/app/assets/images/portfolio/homepagedark.png";
-import AboutImg from "@/app/assets/images/portfolio/aboutpage.png";
-import ContactImg from "@/app/assets/images/portfolio/contactpage.png";
-import ProjectImg from "@/app/assets/images/portfolio/projectpage.png";
-import ProjectDetailImg from "@/app/assets/images/portfolio/projectdetails.png";
-
 interface ProjectDetailProps {}
 
 const ProjectDetail: FC<ProjectDetailProps> = () => (
   <ProjectDetailWrapper>
-    <Image src={MainImg} alt="main" className="main-img" />
+    <Image
+      src="/images/portfolio/main.png"
+      alt="main"
+      className="main-img"
+      width={500}
+      height={500}
+    />
     <h4>Overview</h4>
     <ul className="overview">
       <li>
@@ -115,13 +113,26 @@ const ProjectDetail: FC<ProjectDetailProps> = () => (
       </li>
       <li>
         <p>
-          <span>Challenge:</span> Managing state and ensuring type safety in a
-          complex application.
+          <span>Challenge:</span> Handling CORS issues when calling the contact
+          me form API.
         </p>
         <p>
-          <span>Solution: </span> Implemented Redux for state management and
-          used TypeScript to enforce strict type checking, minimizing bugs and
-          enhancing code maintainability.
+          <span>Solution: </span> Encountered CORS issues when trying to call
+          the contact me form API. Resolved this by configuring the Laravel
+          package to allow requests from the specific origin, ensuring secure
+          and seamless API communication.
+        </p>
+      </li>
+      <li>
+        <p>
+          <span>Challenge:</span> Hosting limitations with Node.js applications.
+        </p>
+        <p>
+          <span>Solution: </span> The hosting platform initially purchased did
+          not support Node.js applications. To overcome this, the site was
+          converted to a static website. Additionally, an API subdomain was
+          created using Laravel 9 to handle contact form submissions, ensuring
+          seamless functionality while adhering to hosting constraints.
         </p>
       </li>
     </ul>
@@ -141,17 +152,35 @@ const ProjectDetail: FC<ProjectDetailProps> = () => (
     <Row gutter={[50, 24]} justify="center">
       <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <div className="image-container">
-          <Image src={HomeLight} alt="extra1" className="extra-img" />
+          <Image
+            src="/images/portfolio/main.png"
+            alt="extra1"
+            className="extra-img"
+            width={500}
+            height={500}
+          />
         </div>
       </Col>
       <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <div className="image-container">
-          <Image src={HomeDark} alt="extra2" className="extra-img" />
+          <Image
+            src="/images/portfolio/homepagedark.png"
+            alt="extra2"
+            className="extra-img"
+            width={500}
+            height={500}
+          />
         </div>
       </Col>
       <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <div className="image-container">
-          <Image src={AboutImg} alt="extra2" className="extra-img" />
+          <Image
+            src="/images/portfolio/aboutpage.png"
+            alt="extra2"
+            className="extra-img"
+            width={500}
+            height={500}
+          />
         </div>
       </Col>
     </Row>
@@ -162,12 +191,24 @@ const ProjectDetail: FC<ProjectDetailProps> = () => (
     <Row gutter={[50, 24]} justify="center">
       <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <div className="image-container">
-          <Image src={ProjectImg} alt="extra1" className="extra-img" />
+          <Image
+            src="/images/portfolio/projectpage.png"
+            alt="extra1"
+            className="extra-img"
+            width={500}
+            height={500}
+          />
         </div>
       </Col>
       <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <div className="image-container">
-          <Image src={ProjectDetailImg} alt="extra1" className="extra-img" />
+          <Image
+            src="/images/portfolio/projectdetails.png"
+            alt="extra1"
+            className="extra-img"
+            width={500}
+            height={500}
+          />
         </div>
       </Col>
     </Row>
@@ -178,7 +219,13 @@ const ProjectDetail: FC<ProjectDetailProps> = () => (
     <Row gutter={[50, 24]} justify="center">
       <Col xs={24} sm={24} md={12} lg={8} xl={8}>
         <div className="image-container">
-          <Image src={ContactImg} alt="extra1" className="extra-img" />
+          <Image
+            src="/images/portfolio/contactpage.png"
+            alt="extra1"
+            className="extra-img"
+            width={500}
+            height={500}
+          />
         </div>
       </Col>
     </Row>

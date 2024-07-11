@@ -34,6 +34,10 @@ export const AboutWrapper = styled.div`
   .image-section {
     justify-content: center;
     display: flex;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   @media (max-width: 991.9px) {
     .about {

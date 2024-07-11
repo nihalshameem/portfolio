@@ -4,7 +4,7 @@ export const OverViewWrapper = styled.div`
   background: var(--background-color);
   position: relative;
   padding: 10px;
-  min-height: 50vh;
+  min-height: 100vh;
   .marginalble-col {
     margin-top: 50px;
   }
