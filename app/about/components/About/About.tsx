@@ -5,8 +5,6 @@ import { AboutWrapper } from "./About.styled";
 
 import { Row, Col } from "antd";
 
-import aboutImg from "@/app/assets/images/about1.jpeg";
-
 interface AboutProps {}
 
 const About: FC<AboutProps> = () => (
@@ -35,7 +33,14 @@ const About: FC<AboutProps> = () => (
       </Col>
       <Col xs={24} sm={24} md={24} lg={4} xl={4}>
         <div className="image-section">
-          <Image src={aboutImg} alt="about" className="about-img" priority />
+          <Image
+            src="/images/about1.jpeg"
+            alt="about"
+            className="about-img"
+            priority
+            width={100}
+            height={100}
+          />
         </div>
       </Col>
     </Row>

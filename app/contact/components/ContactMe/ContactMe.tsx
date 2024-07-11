@@ -7,10 +7,12 @@ import { Button, Col, Form, Input, message, Row } from "antd";
 import { NoticeType } from "antd/es/message/interface";
 
 import ContactCarousel from "../ContactCarousel/ContactCarousel.lazy";
-import { apiRequest } from "@/app/utils/apiRequest";
-import { errMessageIns } from "@/app/utils/commonUtils";
+// import { apiRequest } from "@/app/utils/apiRequest";
+// import { errMessageIns } from "@/app/utils/commonUtils";
 import { FormInputTypes } from "../../ContactEntities";
 import { formInputs } from "../../ContactRepositories";
+import { coreRequest } from "@/app/utils/coreRequest";
+import { errMessageIns } from "@/app/utils/commonUtils";
 
 interface ContactMeProps {}
 
@@ -25,7 +27,7 @@ const ContactMe: FC<ContactMeProps> = () => {
     cb: (type: NoticeType, msg: string) => void
   ) => {
     try {
-      const data = await apiRequest("contact-me", "POST", req);
+      const data = await coreRequest("contact-me-submit", "POST", req);
       if (data && data.status === "success") {
         cb(
           "success",

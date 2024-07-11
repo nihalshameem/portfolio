@@ -6,7 +6,7 @@ import "./globals.css";
 import MyApp from "./_app";
 
 export const metadata: Metadata = {
-  title: "Senior Software Engineer & Web Developer | Home",
+  title: "Nihal Shameem | Senior Software Engineer & Web Developer | Home",
   description:
     "Discover the portfolio of Nihal Shameem, a Senior Software Engineer at Novac Technology Solutions. Specializing in web development, I create innovative and scalable solutions to meet your digital needs. Explore my projects, skills, and expertise.",
 };

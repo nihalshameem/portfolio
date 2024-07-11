@@ -2,6 +2,7 @@ import styled from "@/app/utils/styled-component-init";
 
 export const ContactMeWrapper = styled.div`
   padding: 20px;
+  min-height: 100vh;
 
   .form-div {
     max-width: 500px;

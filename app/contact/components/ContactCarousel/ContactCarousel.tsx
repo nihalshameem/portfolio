@@ -5,8 +5,6 @@ import { ContactCarouselWrapper } from "./ContactCarousel.styled";
 
 import { Carousel } from "antd";
 
-import Img1 from "@/app/assets/images/img1.jpeg";
-import Img2 from "@/app/assets/images/about1.jpeg";
 
 interface ContactCarouselProps {}
 
@@ -21,10 +19,10 @@ const ContactCarousel: FC<ContactCarouselProps> = () => (
       dotPosition="left"
     >
       <div className="carousel-item">
-        <Image src={Img1} alt="_image" priority />
+        <Image src="/images/img1.jpeg" alt="_image" priority width={500} height={500}/>
       </div>
       <div className="carousel-item">
-        <Image src={Img2} alt="_image" priority />
+        <Image src="/images/about1.jpeg" alt="_image" priority width={500} height={500}/>
       </div>
     </Carousel>
   </ContactCarouselWrapper>

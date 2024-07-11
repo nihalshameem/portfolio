@@ -3,17 +3,29 @@ import React, { FC } from "react";
 
 import { CircledImageWrapper } from "./CircledImage.styled";
 
-import Photo from "../../assets/images/myPhoto.png";
-
 interface CircledImageProps {}
 
 const CircledImage: FC<CircledImageProps> = () => (
   <CircledImageWrapper>
     <div className="circle-container">
       <div className="circle">
-        <Image src={Photo} alt="pic" className="circle-image innner" priority />
+        <Image
+          src="/images/myPhoto.png"
+          alt="pic"
+          width={200}
+          height={200}
+          className="circle-image innner"
+          priority
+        />
       </div>
-      <Image src={Photo} alt="pic" className="circle-image" priority />
+      <Image
+        src="/images/myPhoto.png"
+        alt="pic"
+        width={200}
+        height={200}
+        className="circle-image"
+        priority
+      />
     </div>
   </CircledImageWrapper>
 );

@@ -29,18 +29,25 @@ const Footer: FC<FooterProps> = () => (
       </Col>
     </Row>
     <Row justify="center" align="bottom" gutter={[16, 24]}>
-      <Col xs={24} sm={12} md={12} lg={12} xl={12} className="social-media-links-col">
+      <Col
+        xs={24}
+        sm={12}
+        md={12}
+        lg={12}
+        xl={12}
+        className="social-media-links-col"
+      >
         <Space className="social-media-links" size={"large"}>
-          <Link href={"/"}>
+          <Link href={"https://www.facebook.com/mohamed.kani.967422/"}>
             <FacebookFilled />
           </Link>
-          <Link href={"/"}>
+          <Link href={"https://www.linkedin.com/in/nihal-shameem-b02798187/"}>
             <LinkedinFilled />
           </Link>
-          <Link href={"/"}>
+          <Link href={"https://github.com/nihalshameem"}>
             <GithubFilled />
           </Link>
-          <Link href={"/"}>
+          <Link href={"https://www.instagram.com/nihal_sha_me_em/"}>
             <InstagramOutlined />
           </Link>
         </Space>
@@ -51,10 +58,15 @@ const Footer: FC<FooterProps> = () => (
           size={"large"}
           className="info-section-details"
         >
-          <Link href={"/resume.pdf"} download={true} target="_blank">
+          <Link href="/resume.pdf" download={true} target="_blank">
             Download CV
           </Link>
-          <Link href={"/"}>Now in Chennai, India</Link>
+          <Link href={"https://maps.app.goo.gl/RYSjchpi5RgzdTkd8"}>
+            Now in Chennai, India
+          </Link>
+          <Link href={"mailto:nihalportfolio@nihalshameem.com"}>
+            nihalportfolio@nihalshameem.com
+          </Link>
           <Link href={"mailto:nihalshameem6@gmail.com"}>
             nihalshameem6@gmail.com
           </Link>

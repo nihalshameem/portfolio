@@ -13,13 +13,13 @@ export const NavBarWrapper = styled.div`
     }
   }
 
-  .desktop-menu {
-    display: block;
-  }
+  // .desktop-menu {
+  //   display: block;
+  // }
 
-  .mobile-menu {
-    display: none;
-  }
+  // .mobile-menu {
+  //   display: none;
+  // }
   .ant-menu {
     background-color: var(--background-color) !important;
   }
@@ -41,13 +41,13 @@ export const NavBarWrapper = styled.div`
   }
   @media (max-width: 768px) {
     padding: 20px;
-    .desktop-menu {
-      display: none;
-    }
+    // .desktop-menu {
+    //   display: none;
+    // }
 
-    .mobile-menu {
-      display: block;
-    }
+    // .mobile-menu {
+    //   display: block;
+    // }
     .logo {
       padding: 0;
     }
