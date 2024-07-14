@@ -1,13 +1,41 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Col, Row } from "antd";
 
 import ProjectPageHead from "./components/ProjectPageHead/ProjectPageHead.lazy";
 import ProjectCards from "./components/ProjectCards/ProjectCards.lazy";
-import Img1 from "@/app/assets/images/portfolio/main.png";
+import { errMessageIns } from "../utils/commonUtils";
+import { coreRequest } from "../utils/coreRequest";
+
+interface DataInterface {
+  title: string;
+  shortDesc: string;
+  mainImage: string;
+  slug: string;
+}
 
 export default function ProjectsPage() {
+  const initialLoad = useRef<boolean>(true);
+  const [data, setData] = useState<DataInterface[]>([]);
+
+  useEffect(() => {
+    if (initialLoad) {
+      initialLoad.current = false;
+      const fetchData = async () => {
+        try {
+          const response = await coreRequest("projects", "GET");
+          setData(response.data);
+        } catch (error) {
+          console.log("🚀 ~ fetchData ~ error:", errMessageIns(error));
+        }
+      };
+
+      // Call the fetch function
+      fetchData();
+    }
+  }, []);
+
   return (
     <>
       <ProjectPageHead
@@ -16,14 +44,16 @@ export default function ProjectsPage() {
       />
       <Row align={"middle"} gutter={[16, 24]} justify="start">
         {/* loop projects when it get dynamic */}
-        <Col xs={24} sm={24} md={12} lg={8} xl={8}>
-          <ProjectCards
-            title="Nihal Shameem's Portfolio"
-            content="A modern and responsive portfolio website showcasing my expertise in full-stack development, featuring a collection of my projects, skills, and professional journey. Built using React, Next.js, and TypeScript to deliver a seamless user experience."
-            img={Img1}
-            link="/projects/portfolio"
-          />
-        </Col>
+        {data.map((item, i) => (
+          <Col xs={24} sm={24} md={12} lg={8} xl={8} key={i}>
+            <ProjectCards
+              title={item.title}
+              content={item.shortDesc}
+              img={item.mainImage}
+              link={"/projects/" + item.slug}
+            />
+          </Col>
+        ))}
       </Row>
     </>
   );
