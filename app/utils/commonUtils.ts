@@ -29,10 +29,15 @@ interface OverviewTypes {
   role: string;
 }
 
+interface ReferenceTypes {
+  text: string;
+  link: string;
+}
+
 export interface ProjectDetailsInterface {
   title: string;
-  slug:string;
-  mainImage:string;
+  slug: string;
+  mainImage: string;
   shortDesc: string;
   desc: string;
   overview: OverviewTypes;
@@ -42,4 +47,5 @@ export interface ProjectDetailsInterface {
   outcome: string;
   screenshots: DataTypes2[];
   conclusion: string;
+  reference: ReferenceTypes[];
 }

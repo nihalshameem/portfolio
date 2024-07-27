@@ -6,6 +6,7 @@ import { ProjectDetailWrapper } from "./ProjectDetail.styled";
 import { Col, Row } from "antd";
 import { ProjectDetailsInterface } from "@/app/utils/commonUtils";
 import { imagePath } from "@/app/utils/config";
+import Link from "next/link";
 
 interface ProjectDetailProps {
   data: ProjectDetailsInterface;
@@ -95,6 +96,12 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ data }) => (
     ))}
     <h4>Conclusion</h4>
     <p className="content">{data.conclusion}</p>
+    <h4>Refernce Links</h4>
+    {data.reference.map((item, i) => (
+      <p key={i}>
+        <Link href={item.link}>{item.text}</Link>
+      </p>
+    ))}
   </ProjectDetailWrapper>
 );
 
