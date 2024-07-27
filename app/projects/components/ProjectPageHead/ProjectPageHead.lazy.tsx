@@ -1,13 +1,15 @@
+"use client"
 import dynamic from "next/dynamic";
 import React from "react";
 
-import { Skeleton, Space } from "antd";
+const SkeletonInput = dynamic(() => import("antd/es/skeleton/Input"));
+const Space = dynamic(() => import("antd/es/space"));
 
 const ProjectPageHead = dynamic(() => import("./ProjectPageHead"), {
   loading: () => (
     <Space align="start" direction="vertical" size={20} style={{ padding: 20 }}>
-      <Skeleton.Input size="large" active={true} />
-      <Skeleton.Input size="small" active={true} />
+      <SkeletonInput size="large" active={true} />
+      <SkeletonInput size="small" active={true} />
     </Space>
   ),
   ssr: false,

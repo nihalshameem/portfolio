@@ -1,4 +1,3 @@
-
 export const coreUri: string | undefined = process.env.NEXT_PUBLIC_CORE_URI;
 
 export const clientencryptionStatus: string | undefined =
@@ -7,3 +6,4 @@ export const clientencryptionStatus: string | undefined =
 export const clientEncKey: string | undefined =
   process.env.NEXT_PUBLIC_ENCRYPTION_SECRET_KEY;
 
+export const imagePath = process.env.NEXT_PUBLIC_IMAGE_PATH || "";
