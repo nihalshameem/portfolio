@@ -8,10 +8,6 @@ interface ProjectPageProps {
   };
 }
 
-export async function generateStaticParams() {
-  return [{ id: "portfolio" }, { id: "weather-dashboard" }];
-}
-
 const ProjectPage: FC<ProjectPageProps> = async ({ params }) => {
   const { id } = params;
 
