@@ -1,5 +1,5 @@
 "use server";
-import "./about.scss";
+import "../about/about.scss";
 import React from "react";
 
 import CertificateMain from "./CertificateMain";
