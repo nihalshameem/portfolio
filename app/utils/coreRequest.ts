@@ -24,9 +24,11 @@ export async function coreRequest<T = any>(
       const errorMessage = errorData.message || "An error occurred";
       throw new Error(errorMessage);
     }
+    const responseData = await response.json();
+    console.log("🚀 ~ responseData:", responseData)
 
     // Return the successful response
-    return (await response.json()) as T;
+    return responseData;
   } catch (error) {
     console.error("core API Request Error:", errMessageIns(error));
     throw error;

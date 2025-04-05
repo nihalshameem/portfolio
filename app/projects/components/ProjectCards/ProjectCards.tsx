@@ -1,11 +1,12 @@
 import React, { FC } from "react";
 
-import { ProjectCardsWrapper } from "./ProjectCards.styled";
-
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { Tooltip } from "antd";
+
 import { imagePath } from "@/app/utils/config";
+
+import { ProjectCardsWrapper } from "./ProjectCards.styled";
 
 interface ProjectCardsProps {
   title: string;

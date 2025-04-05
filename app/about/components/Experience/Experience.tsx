@@ -1,11 +1,8 @@
 import React, { FC, useState, useEffect } from "react";
 
-import { ExperienceWrapper } from "./Experience.styled";
+import { Timeline, Row, Col } from "antd";
 
-import { List, Timeline, Row, Col } from "antd";
 import { ClockCircleOutlined } from "@ant-design/icons";
-
-interface ExperienceProps {}
 
 interface TimelineItem {
   date: string;
@@ -14,7 +11,7 @@ interface TimelineItem {
   dot?: React.ReactNode;
 }
 
-const Experience: FC<ExperienceProps> = () => {
+const Experience: FC = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -179,7 +176,7 @@ const Experience: FC<ExperienceProps> = () => {
   });
 
   return (
-    <ExperienceWrapper>
+    <div className="experience-wrapper">
       <Row justify="center">
         <Col xs={24} sm={22} md={20} lg={18} xl={16}>
           <h4>Experience</h4>
@@ -189,7 +186,7 @@ const Experience: FC<ExperienceProps> = () => {
           />
         </Col>
       </Row>
-    </ExperienceWrapper>
+    </div>
   );
 };
 

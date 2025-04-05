@@ -49,3 +49,16 @@ export interface ProjectDetailsInterface {
   conclusion: string;
   reference: ReferenceTypes[];
 }
+
+export interface CertificateDetailsInterface {
+  title: string;
+  slug: string;
+  desc: string;
+  image_path: string;
+  file_path: string;
+  earned_on: string;
+  expiry_date: string;
+  issuer: string;
+  certificate_link: string;
+  certificate_link_text: string;
+}

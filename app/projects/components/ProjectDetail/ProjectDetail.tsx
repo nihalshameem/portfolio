@@ -97,7 +97,7 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ data }) => (
     <h4>Conclusion</h4>
     <p className="content">{data.conclusion}</p>
     <h4>Refernce Links</h4>
-    {data.reference.map((item, i) => (
+    {data?.reference?.map((item, i) => (
       <p key={i}>
         <Link href={item.link}>{item.text}</Link>
       </p>

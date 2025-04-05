@@ -2,8 +2,8 @@
 import "./about.scss";
 import React from "react";
 
-import AboutMain from "./AboutMain";
+import CertificateMain from "./CertificateMain";
 
 export default async function Home() {
-  return <AboutMain />;
+  return <CertificateMain />;
 }

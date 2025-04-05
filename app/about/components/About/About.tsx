@@ -1,14 +1,10 @@
 import Image from "next/image";
 import React, { FC } from "react";
 
-import { AboutWrapper } from "./About.styled";
-
 import { Row, Col } from "antd";
 
-interface AboutProps {}
-
-const About: FC<AboutProps> = () => (
-  <AboutWrapper>
+const About: FC = () => (
+  <div className="about-wrapper">
     <Row justify="space-around" align="middle" gutter={[16, 24]}>
       <Col xs={24} sm={24} md={24} lg={20} xl={20}>
         <div className="about">
@@ -44,7 +40,7 @@ const About: FC<AboutProps> = () => (
         </div>
       </Col>
     </Row>
-  </AboutWrapper>
+  </div>
 );
 
 export default About;
